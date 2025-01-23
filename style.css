@@ -1,0 +1,449 @@
+/* Font Family */
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Font Family */
+
+/* Styles Start */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #212529;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
+/* Navigation Start */
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  background-color: #00000000;
+  transition: all 0.3s ease 0s;
+  z-index: 100;
+}
+
+.navBar.sticking {
+  background-color: #fff4f0;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+#logo {
+  height: 74px;
+}
+
+#logoPath {
+  fill: #fff4f0;
+  transition: all 0.3s ease 0s;
+}
+
+.navBar.sticking #logoPath {
+  fill: #c1121f;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navLinks {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff4f0;
+  margin: 0px 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.navLinks:hover {
+  color: #c1121f;
+}
+
+.navBar.sticking .navLinks {
+  color: #212529;
+}
+
+.navBar.sticking .navLinks:hover {
+  color: #c1121f;
+}
+
+#logInBtn {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #c1121f;
+  border: #c1121f 2px solid;
+  color: #fff4f0;
+  padding: 0.6em 1.5em;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+#logInBtn:hover {
+  background-color: #00000000;
+  border-color: #fff4f0;
+}
+
+.navBar.sticking #logInBtn:hover {
+  color: #c1121f;
+  background-color: #00000000;
+  border-color: #c1121f;
+}
+
+/* Navigation End */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Homepage Start */
+
+#home {
+  background-image: url(images/eatshere-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hHead {
+  height: 200px;
+  margin-bottom: 75px;
+}
+
+#hTag {
+  font-size: 30px;
+  color: #fff4f0;
+  margin-bottom: 50px;
+}
+
+#hBtn {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff4f0;
+  background-color: #c1121f;
+  padding: 0.6em 1.5em;
+  border: #c1121f 2px solid;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+}
+
+#hBtn:hover {
+  background-color: #00000000;
+  border-color: #fff4f0;
+}
+
+/* Homepage End */
+
+/* Menu Page Start */
+
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  background-color: #780000;
+  padding: 100px 200px;
+}
+
+#menuNav {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  position: sticky;
+  top: 150px;
+}
+
+#menuNavTitle {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff4f0;
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.menu-nav-head {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff4f0;
+  font-weight: 500;
+  line-height: 48px;
+  margin-top: 15px;
+}
+
+.menu-links {
+  color: hsla(16, 100%, 97%, 0.7);
+  font-size: 20px;
+  transition: all 0.3s ease;
+  line-height: 48px;
+}
+
+.menu-links:hover {
+  color: #fff4f0;
+}
+
+#menuCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  gap: 100px;
+}
+
+.menu-ctn {
+  width: 100%;
+}
+
+.m-head {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: #fff4f0;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid hsla(16, 100%, 97%, 0.75);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 275px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-parent {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.item-img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff4f0;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+
+/* Item Images Start */
+
+.cw-solo {
+  background-image: url(images/products/chicken-wings-meal.jpg);
+}
+
+.cw-meal {
+  background-image: url(images/products/chicken-wings-meal.jpg);
+}
+
+.bb-steak {
+  background-image: url();
+}
+
+.pastil {
+  background-image: url(images/products/pastil.jpg);
+}
+
+.poppers {
+  background-image: url(images/products/poppers.jpg);
+}
+
+.fries {
+  background-image: url(images/products/french-fries.jpg);
+}
+
+.nachos {
+  background-image: url(images/products/nachos-overload.JPG);
+}
+
+.c-skin {
+  background-image: url();
+}
+
+/* Item Images End */
+
+.cell:hover .item-img {
+  transform: scale(1.1);
+}
+
+.item-name {
+  color: #fff4f0;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Menu Page End */
+
+/* About Page Start */
+
+#about {
+  display: flex;
+  align-items: center;
+  padding: 100px 200px;
+  background-color: #fff4f0;
+}
+
+#aboutImg {
+  height: 700px;
+  margin-right: 100px;
+}
+
+#rightCtn {
+  display: flex;
+  flex-direction: column;
+}
+
+#aHead {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 92px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 35px;
+}
+
+.aDesc {
+  font-size: 24px;
+  text-align: justify;
+  line-height: 1.6em;
+  color: #212529;
+}
+
+/* About Page End */
+
+/* Log In Page */
+
+#logInMain {
+  display: flex;
+  min-height: 100vh;
+  background-color: #780000;
+  justify-content: center;
+  align-items: center;
+}
+
+#logInCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff4f0;
+  width: 750px;
+  height: 900px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px hsla(0, 0%, 0%, 0.1);
+}
+
+#formCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0px;
+}
+
+#logInHeader {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 100px;
+}
+
+#logInMain label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.textbox {
+  background-color: #fff4f0;
+  font-size: 16px;
+  padding: 15px;
+  width: 400px;
+  outline: none;
+  border: none;
+  border-bottom: #212529 1px solid;
+}
+
+#submitBtn {
+  background-color: #c1121f;
+  color: #fff4f0;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px;
+  width: 398px;
+  outline: none;
+  border: #c1121f 2px solid;
+  border-radius: 50px;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#submitBtn:hover {
+  color: #c1121f;
+  background-color: #00000000;
+}
+
+.underLink {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.underLink:hover {
+  color: #c1121f;
+}
+
+#forgotPass {
+  margin: 25px 0px;
+}
+
+#noAcc {
+  font-size: 16px;
+}
+
+#createNewCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
