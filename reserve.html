@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reserve.css" />
+  </head>
+  <body>
+    <header class="navBar">
+      <a href="index.html#home">
+        <img id="logo" src="images/logo-white.svg" alt="" />
+      </a>
+      <nav>
+        <ul>
+          <li><a class="navLinks" href="index.html#home">Home</a></li>
+          <li><a class="navLinks" href="index.html#menu">Menu</a></li>
+          <li><a class="navLinks" href="index.html#about">About</a></li>
+          <li><a class="navLinks" href="index.html#contact">Contacts</a></li>
+          <li><a class="navLinks" href="#">Reserve</a></li>
+        </ul>
+      </nav>
+      <a href="log-in.html" id="logInBtn">Log In</a>
+    </header>
+
+    <main>
+      <section id="reserve">
+        <form action="" method="post">
+          <div id="mainCtn">
+            <div id="reserveHeader">Reservation</div>
+            <div class="grid">
+              <div class="grid-header">Your Information</div>
+              <div id="fName">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="First Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="lName">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Last Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="mail">
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email Address"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="phone">
+                <input
+                  type="tel"
+                  name=""
+                  id=""
+                  placeholder="Phone Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+            </div>
+            <div class="grid">
+              <div class="grid-header">Reservation Details</div>
+              <div id="date">
+                <input
+                  type="date"
+                  name=""
+                  id=""
+                  placeholder="Date of Reservation"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="time">
+                <input
+                  type="time"
+                  name=""
+                  id=""
+                  placeholder="Time of Reservation"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="guest">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  placeholder="Number of Guest/s"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div id="restrict">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Dietary Restriction (optional)"
+                  autocomplete="off"
+                />
+              </div>
+              <div id="notes">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Reservation Notes (optional)"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+            <div id="submit">
+              <input id="submitBtn" type="submit" value="Submit" />
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

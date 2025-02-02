@@ -1,6 +1,6 @@
 /* Font Family */
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Font Family */
 
@@ -11,13 +11,20 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
-  color: #212529;
+  color: #000;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
+}
+
+#home,
+#fMenu,
+#menu,
+#about,
+#reserve {
+  scroll-margin-top: -100px;
 }
 
 /* Navigation Start */
@@ -33,11 +40,12 @@ html {
   padding: 15px 200px;
   background-color: #00000000;
   transition: all 0.3s ease 0s;
-  z-index: 100;
+  z-index: 99;
+  /* filter: blur(5px); */
 }
 
 .navBar.sticking {
-  background-color: #fff4f0;
+  background-color: cornsilk;
   box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
 }
 
@@ -46,12 +54,12 @@ html {
 }
 
 #logoPath {
-  fill: #fff4f0;
+  fill: cornsilk;
   transition: all 0.3s ease 0s;
 }
 
 .navBar.sticking #logoPath {
-  fill: #c1121f;
+  fill: firebrick;
 }
 
 li {
@@ -65,29 +73,29 @@ a {
 .navLinks {
   font-size: 24px;
   font-weight: 500;
-  color: #fff4f0;
+  color: cornsilk;
   margin: 0px 50px;
   transition: all 0.3s ease 0s;
 }
 
 .navLinks:hover {
-  color: #c1121f;
+  color: firebrick;
 }
 
 .navBar.sticking .navLinks {
-  color: #212529;
+  color: #000;
 }
 
 .navBar.sticking .navLinks:hover {
-  color: #c1121f;
+  color: firebrick;
 }
 
 #logInBtn {
   font-size: 20px;
   font-weight: 500;
-  background-color: #c1121f;
-  border: #c1121f 2px solid;
-  color: #fff4f0;
+  background-color: firebrick;
+  border: firebrick 2px solid;
+  color: cornsilk;
   padding: 0.6em 1.5em;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
@@ -95,13 +103,13 @@ a {
 
 #logInBtn:hover {
   background-color: #00000000;
-  border-color: #fff4f0;
+  border-color: cornsilk;
 }
 
 .navBar.sticking #logInBtn:hover {
-  color: #c1121f;
+  color: firebrick;
   background-color: #00000000;
-  border-color: #c1121f;
+  border-color: firebrick;
 }
 
 /* Navigation End */
@@ -109,6 +117,7 @@ a {
 main {
   display: flex;
   flex-direction: column;
+  /* filter: blur(5px); */
 }
 
 /* Homepage Start */
@@ -123,186 +132,675 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 #hHead {
   height: 200px;
-  margin-bottom: 75px;
 }
 
 #hTag {
-  font-size: 30px;
-  color: #fff4f0;
-  margin-bottom: 50px;
+  font-size: 46px;
+  font-style: italic;
+  font-weight: 300;
+  color: cornsilk;
+  font-family: "Dancing Script", serif;
 }
 
 #hBtn {
   font-size: 24px;
   font-weight: 500;
-  color: #fff4f0;
-  background-color: #c1121f;
+  color: cornsilk;
+  background-color: firebrick;
   padding: 0.6em 1.5em;
-  border: #c1121f 2px solid;
+  border: firebrick 2px solid;
   border-radius: 50px;
   transition: all 0.3s ease 0s;
 }
 
 #hBtn:hover {
   background-color: #00000000;
-  border-color: #fff4f0;
+  border-color: cornsilk;
 }
 
 /* Homepage End */
 
+/* Featured Menu Start */
+
+#fMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 300px;
+  background-color: cornsilk;
+}
+
+#fMenuHead {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 92px;
+  font-weight: 700;
+  color: firebrick;
+  margin-bottom: 75px;
+}
+
+#bSellBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.f-menu {
+  width: 250px;
+  height: 400px;
+  background-color: darkred;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Featured Imgs Start */
+
+#bSell1 {
+  background-image: url(images/products/bb-steak.jpg);
+}
+#bSell2 {
+  background-image: url(images/products/nachos-overload.JPG);
+}
+#bSell3 {
+  background-image: url(images/products/coffee.jpg);
+}
+#bSell4 {
+  background-image: url(images/products/mixed.jpg);
+}
+#bSell5 {
+  background-image: url(images/products/dessert.jpg);
+}
+
+/* Featured Imgs End */
+
+.f-menu:hover {
+  transform: scale(1.05);
+}
+
+#bSellBox:hover > .f-menu:not(:hover) {
+  transform: scale(0.95);
+  filter: grayscale(100%) blur(5px);
+}
+
+#seeMore {
+  font-size: 24px;
+  font-weight: 500;
+  color: cornsilk;
+  background-color: firebrick;
+  padding: 0.6em 1.5em;
+  border: firebrick 2px solid;
+  border-radius: 50px;
+  margin-top: 75px;
+  transition: all 0.3s ease 0s;
+}
+
+#seeMore:hover {
+  background-color: #00000000;
+  border-color: firebrick;
+  color: firebrick;
+}
+
+/* Featured Menu End */
+
 /* Menu Page Start */
 
 #menu {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  background-color: #780000;
+  background-color: darkred;
   padding: 100px 200px;
+  display: flex;
+  gap: 25px;
 }
 
 #menuNav {
   width: 25%;
+}
+
+#menuNavContent {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  background-color: cornsilk;
+  padding: 34px;
+  border-radius: 20px;
   position: sticky;
   top: 150px;
 }
 
-#menuNavTitle {
-  font-family: "Barlow Condensed", sans-serif;
-  color: #fff4f0;
+#menuHeader {
+  font-family: "Anek Latin", sans-serif;
   font-size: 46px;
-  font-weight: 600;
-  margin-bottom: 15px;
+  font-weight: 700;
+  color: firebrick;
+  margin-bottom: 20px;
 }
 
-.menu-nav-head {
-  font-family: "Barlow Condensed", sans-serif;
-  color: #fff4f0;
-  font-weight: 500;
-  line-height: 48px;
-  margin-top: 15px;
+.product-categories {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: firebrick;
+  line-height: 38px;
+  margin-top: 16px;
 }
 
-.menu-links {
-  color: hsla(16, 100%, 97%, 0.7);
+.menu-nav-links {
   font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 38px;
   transition: all 0.3s ease;
-  line-height: 48px;
 }
 
-.menu-links:hover {
-  color: #fff4f0;
+.menu-nav-links:hover {
+  color: firebrick;
+  transform: translateY(-2px);
 }
 
-#menuCol {
+#menuCtn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 75%;
-  gap: 100px;
+  gap: 25px;
 }
 
-.menu-ctn {
-  width: 100%;
+.category-ctn {
+  display: flex;
+  flex-direction: column;
+  background-color: cornsilk;
+  padding: 50px;
+  border-radius: 20px;
 }
 
-.m-head {
-  font-family: "Barlow Condensed", sans-serif;
+.category-headers {
+  font-family: "Anek Latin", sans-serif;
   font-size: 38px;
-  font-weight: 600;
-  color: #fff4f0;
+  font-weight: 700;
+  color: firebrick;
+  padding-bottom: 25px;
+  border-bottom: darkred 2px solid;
   margin-bottom: 50px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid hsla(16, 100%, 97%, 0.75);
 }
 
-.grid {
+.category-headers-2 {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: firebrick;
+}
+
+.category-desc {
+  font-size: 20px;
+  font-style: italic;
+  padding-bottom: 25px;
+  border-bottom: darkred 2px solid;
+  margin-bottom: 50px;
+}
+
+.product-ctn {
   display: grid;
-  grid-template-rows: 275px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 225px;
+  grid-gap: 42px;
+}
+
+.product-ctn-linear {
+  display: grid;
+  grid-template-columns: 250px 2fr 1fr 1fr 1fr;
+  grid-gap: 34px;
+}
+
+.product-ctn-linear-silog {
+  display: grid;
+  grid-template-columns: 250px 2fr 1fr;
+  grid-gap: 60px;
+}
+
+.product-ctn-linear-ld {
+  display: grid;
+  grid-template-columns: 250px 5fr 1fr 5fr 1fr;
+  grid-gap: 28px;
+}
+
+.product-ctn-milk {
+  display: grid;
+  grid-template-columns: 250px 2fr 1fr 1fr;
+  grid-gap: 34px;
+}
+
+.product-ctn-pack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 250px;
+  grid-gap: 42px;
+}
+
+.flavors-ctn {
+  display: grid;
+  grid-template-columns: 1fr fr;
+  background-color: cornsilk;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+.flavor {
+  gap: 70px;
+}
+
+.flavors-header {
+  grid-column: span 2;
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: firebrick;
+  margin-bottom: 10px;
+}
+
+.flavors {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.flavors-best {
+  font-size: 8px;
+  font-weight: 500;
+  color: #ffe32a;
+  grid-template-columns: 1fr 1fr;
+  background-color: firebrick;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+.flavors-reco {
+  font-size: 8px;
+  font-weight: 500;
+  color: firebrick;
+  grid-template-columns: 1fr 1fr;
+  background-color: #f4ffce;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+.cell-linear-2 {
+  padding: 15px 0;
+}
+
+.cell-linear-img {
+  grid-row: span 2;
+}
+
+.cell-linear-img-2 {
+  grid-row: span 1;
+}
+
+.cell-linear-addons {
+  grid-column: span 4;
+}
+
+.cell-milk-addons {
+  grid-column: span 3;
 }
 
 .cell {
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  cursor: pointer;
+  align-items: start;
+  gap: 28px;
 }
 
-.img-parent {
-  width: 175px;
-  height: 175px;
-  border-radius: 50%;
-  margin-bottom: 25px;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.item-img {
+.addons-ctn {
+  display: flex;
   width: 100%;
-  height: 100%;
-  background-color: #fff4f0;
+  background-color: cornsilk;
+  padding: 5px;
+  border-radius: 50px;
+  justify-content: center;
+  gap: 60px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+.product-img {
+  width: 40%;
+  height: 225px;
+  background-color: darkred;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
-  transition: all 0.3s ease;
 }
 
-/* Item Images Start */
-
-.cw-solo {
-  background-image: url(images/products/chicken-wings-meal.jpg);
+.product-img-linear {
+  width: 100%;
+  height: 100%;
+  background-color: darkred;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
 }
 
-.cw-meal {
-  background-image: url(images/products/chicken-wings-meal.jpg);
+.product-details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  width: 60%;
 }
 
-.bb-steak {
-  background-image: url();
-}
-
-.pastil {
-  background-image: url(images/products/pastil.jpg);
-}
-
-.poppers {
-  background-image: url(images/products/poppers.jpg);
-}
-
-.fries {
-  background-image: url(images/products/french-fries.jpg);
-}
-
-.nachos {
-  background-image: url(images/products/nachos-overload.JPG);
-}
-
-.c-skin {
-  background-image: url();
-}
-
-/* Item Images End */
-
-.cell:hover .item-img {
-  transform: scale(1.1);
-}
-
-.item-name {
-  color: #fff4f0;
-  font-weight: 500;
+.product-name {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: firebrick;
   text-align: center;
+}
+
+.product-name-linear {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.product-name-linear-ld {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+.addons-details {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.emphasis {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  color: firebrick;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.product-desc {
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.product-info-ctn {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+.product-info-ctn.tri {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-gap: 10px;
+}
+
+.product-info,
+.product-price {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-info-2 {
+  font-size: 16px;
+  font-weight: 500;
+  align-self: center;
+}
+
+.product-info.tri,
+.product-price.tri {
+  align-self: center;
+}
+
+.product-info.tri {
+  font-weight: 700;
+  grid-column: span 2;
+  color: firebrick;
+}
+
+.product-price {
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 700;
+  text-align: right;
+  color: firebrick;
+}
+
+.product-price-linear {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: firebrick;
+  line-height: 32px;
+  text-align: center;
+}
+
+.product-price-linear-ld {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: firebrick;
+  line-height: 40px;
+  text-align: center;
+}
+
+.product-price-linear-2 {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: firebrick;
+  line-height: 32px;
+  text-align: right;
+}
+
+.pack-cell {
+  display: flex;
+  gap: 20px;
+}
+
+.pack-img {
+  width: 40%;
+  background-color: firebrick;
+  border-radius: 15px;
+  background-size: cover;
+}
+
+.pack-ctn {
+  width: 60%;
+}
+
+.pack-header {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: firebrick;
+}
+
+.pack-price {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: firebrick;
+}
+
+.price-span {
+  font-size: 1rem;
+  font-weight: 400;
+  color: firebrick;
+}
+
+.pack-desc {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.lh2 {
+  line-height: 40px;
+}
+
+.long {
+  font-size: 16px;
+}
+
+.addons {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: firebrick;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.camo {
+  color: cornsilk;
+}
+
+/* silog */
+
+.silog-desc {
+  font-size: 17px;
+  text-align: left;
+  font-style: italic;
+  margin-top: 7px;
+}
+.silog-price {
+  font-size: 20px;
+  color: firebrick;
+  font-weight: 700;
+  font-family: "Anek Latin", sans-serif;
+  text-align: right;
+}
+
+.silog-cell {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  gap: 20px;
+}
+
+.silog-img {
+  background-color: darkred;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.silog-content {
+  text-align: center;
+  line-height: 33px;
+}
+
+.ldsilog-cell {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+.silog-name {
+  text-align: left;
+  line-height: 33px;
+  font-family: "Anek Latin", sans-serif;
+}
+
+.slg-name {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* crew */
+
+.larger {
+  font-size: 22px;
+  font-weight: 700;
+  color: darkred;
+}
+
+.pcg-title {
+  display: flex;
+}
+
+.pcg-namebox {
+  justify-content: left;
+  text-align: left;
+}
+
+.pcg-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(150, 4, 4);
+}
+
+.pcg-price {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: right;
+  color: rgb(150, 4, 4);
+}
+
+.pcg-pricebox {
+  justify-content: right;
+  text-align: right;
+}
+
+.pcg-save {
+  font-size: 17px;
+  text-align: left;
+  font-style: italic;
+  margin-top: px;
+}
+
+.pcg-descbox {
+  margin-top: 10px;
+}
+.pcg-descname {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.pcg-csk {
+  display: flex;
+  gap: 25px;
+}
+
+.csk-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: darkred;
+}
+
+.csk-desc {
+  font-size: 20px;
+  color: darkred;
+}
+
+.product-img-parent-crew {
+  width: 40%;
+  height: 240px;
+  background-color: darkred;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
 /* Menu Page End */
@@ -312,43 +810,208 @@ main {
 #about {
   display: flex;
   align-items: center;
-  padding: 100px 200px;
-  background-color: #fff4f0;
+  justify-content: center;
+  border: 0px solid violet;
+  gap: 10%;
 }
 
-#aboutImg {
-  height: 700px;
-  margin-right: 100px;
+#abt-bg {
+  height: 100vh;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background: url(images/about-background.JPG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 300px;
 }
 
-#rightCtn {
+#abt-con {
+  width: 100%;
+  background-color: rgba(27, 27, 21, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.37);
+  border-radius: 10px;
+  padding: 75px 100px;
+}
+
+#abt-Header {
+  font-size: 72px;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: cornsilk;
+  text-shadow: -2px 2px 0px#000000;
+  margin-bottom: 50px;
+}
+
+.abt-head {
+  font-size: 50px;
+  font-family: "Anek Latin", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: cornsilk;
+  margin-bottom: 50px;
+}
+
+.abt-desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  width: 100%;
+  text-align: justify;
+  color: rgb(252, 243, 231);
+  margin-bottom: 20px;
+}
+
+/* About Owners Start */
+
+#abtOwner {
   display: flex;
   flex-direction: column;
+  background-color: cornsilk;
+  padding: 100px 200px;
+  gap: 50px;
 }
 
-#aHead {
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: 92px;
+#abtOwnerHead {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 74px;
   font-weight: 700;
-  color: #212529;
-  margin-bottom: 35px;
+  color: firebrick;
+  text-align: center;
 }
 
-.aDesc {
-  font-size: 24px;
-  text-align: justify;
-  line-height: 1.6em;
-  color: #212529;
+#ownerCtn {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 50px;
 }
+
+.owner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 50px;
+  background-color: beige;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -1px rgb(0, 0, 0, 0.25);
+}
+
+.owner-img {
+  aspect-ratio: 1;
+  width: 400px;
+  border-radius: 50% 50% 10px 10px;
+  background-color: firebrick;
+  background-size: cover;
+}
+
+.owner-name {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: firebrick;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.owner-title {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.owner-desc {
+  font-size: 1.563rem;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 25px;
+  line-height: 1.6em;
+}
+
+/* Owner Images Start */
+
+#aira {
+  background-image: url(images/aira.jpg);
+}
+
+#ayen {
+  background-image: url(images/Ayen.JPG);
+}
+
+/* Owner Images End */
 
 /* About Page End */
+
+/* Contact Start */
+.fbox {
+  background-color: darkred;
+  padding-top: 50px;
+}
+.fbox1 {
+  padding: 50px;
+  display: flex;
+  border: px solid black;
+  gap: 100px;
+}
+
+.con-header {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: cornsilk;
+}
+
+.con-title {
+  font-family: "Anek Latin", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: firebrick;
+  margin-bottom: 20px;
+}
+
+.con-desc {
+  font-size: 15px;
+  color: cornsilk;
+  margin-bottom: 20px;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.social-box {
+  border: 0px solid plum;
+  height: 250px;
+  width: 500px;
+}
+
+.icons {
+  padding: 5px;
+  height: 35px;
+  aspect-ratio: 1;
+  border: cornsilk 3px solid;
+  border-radius: 50%;
+}
+
+/* Contact End */
 
 /* Log In Page */
 
 #logInMain {
   display: flex;
   min-height: 100vh;
-  background-color: #780000;
+  background-color: darkred;
   justify-content: center;
   align-items: center;
 }
@@ -357,7 +1020,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff4f0;
+  background-color: cornsilk;
   width: 750px;
   height: 900px;
   padding: 50px;
@@ -392,24 +1055,24 @@ main {
 }
 
 .textbox {
-  background-color: #fff4f0;
+  background-color: cornsilk;
   font-size: 16px;
   padding: 15px;
   width: 400px;
   outline: none;
   border: none;
-  border-bottom: #212529 1px solid;
+  border-bottom: #000 1px solid;
 }
 
 #submitBtn {
-  background-color: #c1121f;
-  color: #fff4f0;
+  background-color: firebrick;
+  color: cornsilk;
   font-size: 20px;
   font-weight: 600;
   padding: 15px;
   width: 398px;
   outline: none;
-  border: #c1121f 2px solid;
+  border: firebrick 2px solid;
   border-radius: 50px;
   margin-top: 50px;
   cursor: pointer;
@@ -417,7 +1080,7 @@ main {
 }
 
 #submitBtn:hover {
-  color: #c1121f;
+  color: firebrick;
   background-color: #00000000;
 }
 
@@ -430,7 +1093,7 @@ main {
 }
 
 .underLink:hover {
-  color: #c1121f;
+  color: firebrick;
 }
 
 #forgotPass {
@@ -447,3 +1110,208 @@ main {
   align-items: center;
   gap: 10px;
 }
+
+/* Contact Section */
+.contact {
+  background: darkred;
+  padding: 40px 20px;
+  text-align: center; /* Center align the whole section */
+}
+
+#contact-box {
+  display: flex;
+  gap: 200px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-head {
+  font-family: sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  color: cornsilk;
+}
+
+/* Contact Information */
+.contact-info {
+  margin-bottom: 30px; /* Adds space below contact info */
+}
+
+/* Contact Links Section */
+.contact-links {
+  display: column;
+  justify-content: center;
+}
+
+/* Follow Us and Message Us - Both columns */
+.follow-us,
+.message-us {
+  text-align: center; /* Ensures text is centered */
+}
+
+/* Social Media Links Styling */
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Social Media Icon Styling */
+.social-icon {
+  width: 45px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.3);
+}
+
+.map-box:hover {
+  transform: scale(1.1);
+}
+
+/* Adjust for Message Us section (Messenger logo) */
+.message-us img.social-icon {
+  width: 45px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Animation */
+.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Product Images Start */
+
+.cell-a1 {
+  background-image: url(images/products/solo-chicken.jpg);
+}
+
+.cell-a2 {
+  background-image: url(images/products/chicken-wings-meal.jpg);
+}
+
+.cell-a3 {
+  background-image: url(images/products/bb-steak.jpg);
+}
+
+.cell-a4 {
+  background-image: url(images/products/pastil.jpg);
+}
+
+.cell-a5 {
+  background-image: url(images/products/poppers.jpg);
+}
+
+.cell-b1 {
+  background-image: url(images/products/french-fries.jpg);
+}
+
+.cell-b2 {
+  background-image: url(images/products/nachos-overload.JPG);
+}
+
+.cell-b3 {
+  background-image: url(images/products/c-skin.jpg);
+}
+
+.cell-c1 {
+  background-image: url();
+}
+
+.cell-c2 {
+  background-image: url();
+}
+
+.cell-d1 {
+  background-image: url(images/products/coffee.jpg);
+}
+
+.cell-e1 {
+  background-image: url(images/products/milky.jpg);
+}
+
+.cell-f1 {
+  background-image: url(images/products/fsoda.jpg);
+}
+
+.cell-g1 {
+  background-image: url(images/products/kutsinta.jpg);
+}
+
+.cell-g2 {
+  background-image: url(images/products/p-cheese.jpg);
+}
+
+.cell-g3 {
+  background-image: url(images/products/palitaw.jpg);
+}
+
+.cell-g4 {
+  background-image: url(images/products/mixed.jpg);
+}
+
+.cell-h1 {
+  background-image: url(images/products/breakfast.jpg);
+}
+
+.cell-i1 {
+  background-image: url(images/products/ldinner.jpg);
+}
+
+.cell-j1 {
+  background-image: url(images/products/dessert.jpg);
+}
+
+.cell-k1 {
+  background-image: url();
+}
+
+.cell-l1 {
+  background-image: url(images/products/upgrade.jpg);
+}
+
+.cell-m1 {
+  background-image: url(images/products/pack-a.jpg);
+}
+
+.cell-m2 {
+  background-image: url(images/products/pack-b.jpg);
+}
+
+.cell-m3 {
+  background-image: url(images/products/pack-c.jpg);
+}
+
+.cell-m4 {
+  background-image: url(images/products/pack-d.jpg);
+}
+
+.cell-m5 {
+  background-image: url(images/products/crew.jpg);
+}
+
+#packA {
+  background-image: url(images/products/pack-a.jpg);
+}
+#packB {
+  background-image: url(images/products/pack-b.jpg);
+}
+#packC {
+  background-image: url(images/products/pack-c.jpg);
+}
+#packD {
+  background-image: url(images/products/pack-d.jpg);
+}
+#sKit {
+  background-image: url(images/products/crew.jpg);
+}
+
+/* Product Images End */
