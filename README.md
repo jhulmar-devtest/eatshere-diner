@@ -4,11 +4,8 @@ A front-end website redesign for **EatsHere Diner**, a restaurant in Silang, Cav
 
 > **Note:** This is a UI-only project. It has no backend and no database, so the forms are designs only and do not save or send any data. It was made before we learned PHP and databases.
 
-<!-- ✏️ EDIT HERE: add a screenshot. Put an image in your repo (for example, images/screenshot.png) and keep the line below -->
-![EatsHere Diner preview](images/screenshot.png)
-
 <!-- ✏️ EDIT HERE: add your GitHub Pages link once it's published, or delete this line -->
-**Live demo:** https://your-username.github.io/your-repo-name/
+**Live demo:** https://jhulmar-devtest.github.io/eatshere-diner/
 
 ## Features
 
@@ -68,6 +65,7 @@ eatshere-diner/
 
 <!-- ✏️ EDIT HERE: replace these with the names of everyone who contributed -->
 
+- Rodanielyn Erincath Abas
+- Abelardo Babac
 - Jhulmar Bregonia - [@jhulmar-devtest](https://github.com/jhulmar-devtest)
-- Name of contributor
-- Name of contributor
+- Nicole Pasigna
