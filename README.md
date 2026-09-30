@@ -66,6 +66,6 @@ eatshere-diner/
 <!-- ✏️ EDIT HERE: replace these with the names of everyone who contributed -->
 
 - Rodanielyn Erincath Abas
-- Abelardo Babac
+- Abelardo Babac - [@babacabelardo03-creator](https://github.com/babacabelardo03-creator)
 - Jhulmar Bregonia - [@jhulmar-devtest](https://github.com/jhulmar-devtest)
 - Nicole Pasigna
